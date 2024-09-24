@@ -21,3 +21,19 @@
    - If the current element is the same as `Element`, increase `Count` by 1.
    - If they are different, decrease `Count` by 1.
 3. The integer present in `Element` should be the result we are expecting.
+
+---
+
+## Kadane's Algorithm
+
+**Kadane's Algorithm** is used to find the maximum sum of a contiguous subarray in an array of integers (positive or negative).
+
+### Approach:
+1. Initialize two variables:
+   - `currentSum`: Stores the sum of the current subarray.
+   - `maxSum`: Tracks the maximum subarray sum found so far.
+2. Traverse the array:
+   - Add each element to `currentSum`.
+   - If `currentSum` is less than the current element, reset `currentSum` to the current element (start a new subarray).
+   - Update `maxSum` if `currentSum` is larger than `maxSum`.
+3. Return `maxSum`.

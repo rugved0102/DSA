@@ -21,6 +21,7 @@
    - If the current element is the same as `Element`, increase `Count` by 1.
    - If they are different, decrease `Count` by 1.
 3. The integer present in `Element` should be the result we are expecting.
+ex: https://leetcode.com/problems/majority-element/description/
 
 ---
 

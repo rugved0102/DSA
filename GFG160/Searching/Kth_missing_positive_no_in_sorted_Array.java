@@ -1,5 +1,14 @@
-import java.util.*;
-public class AllocateMinPages {
+import java.util.Arrays;
+public class Kth_missing_positive_no_in_sorted_Array {
+    // Java program to find the minimum page limit by iterating
+// over all possible page limits
+
+
+
+
+    
+    // Function to check if books can be allocated to
+    // all k students without exceeding 'pageLimit'
     static boolean check(int[] arr, int k, int pageLimit) {
         
         // Starting from the first student
@@ -49,4 +58,11 @@ public class AllocateMinPages {
         
         return res;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 67, 90};
+        int k = 2;
+        System.out.println(findPages(arr, k));
+    }
 }
+

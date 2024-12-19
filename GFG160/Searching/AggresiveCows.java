@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class AggresiveCows {
     public static int aggressiveCows(int[] stalls, int k) {
         Arrays.sort(stalls);

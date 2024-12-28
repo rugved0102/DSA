@@ -1,4 +1,6 @@
-public class Search_in_matrix {
+//https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/search-in-a-matrix17201720
+
+public class Search_in_row_col_sorted_matrix {
     public static boolean matSearch(int mat[][], int x) {
         int rows = mat.length;
          int cols = mat[0].length;

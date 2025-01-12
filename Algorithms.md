@@ -38,3 +38,4 @@ ex: https://leetcode.com/problems/majority-element/description/
    - If `currentSum` is less than the current element, reset `currentSum` to the current element (start a new subarray).
    - Update `maxSum` if `currentSum` is larger than `maxSum`.
 3. Return `maxSum`.
+ex: https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/kadanes-algorithm-1587115620

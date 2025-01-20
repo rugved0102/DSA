@@ -1,3 +1,7 @@
+package GFG160.Hashing;
+
+import java.util.HashSet;
+
 class Union_of_arrays_with_duplicate {
     public static int findUnion(int a[], int b[]) {
         // code here

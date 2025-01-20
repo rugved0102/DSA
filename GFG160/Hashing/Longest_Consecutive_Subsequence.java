@@ -1,3 +1,6 @@
+package GFG160.Hashing;
+import java.util.*;
+import java.io.*;
 class Longest_Consecutive_Subsequence {
     public int longestConsecutive(int[] arr) {
         // code here

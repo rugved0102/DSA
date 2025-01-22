@@ -8,5 +8,7 @@ public class main {
         list.insertLast(0);
         list.insert(5, 2);
         list.display();
+        System.out.println(list.deleteFirst());
+        list.display();
     }
 }

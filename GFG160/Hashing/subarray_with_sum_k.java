@@ -1,4 +1,4 @@
-
+package GFG160.Hashing;
 class subarray_with_sum_k {
     public int countSubarrays(int arr[], int k) {
          int res = 0;

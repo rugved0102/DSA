@@ -8,6 +8,20 @@ public class LL {
         this.size = 0;
     }
 
+    public int deleteFirst() {
+        int value = head.value;
+        head = head.next;
+        if(head == null) {
+            tail = null;
+        }
+        size--;
+        return value;
+    }
+
+    public void deleteLast() {
+        
+    }
+
     public void insert(int val, int index) {
         if(size == 0) {
             insertFirst(val);

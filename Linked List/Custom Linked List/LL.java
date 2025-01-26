@@ -17,6 +17,16 @@ public class LL {
         size--;
         return value;
     }
+    public Node findNodeValue(int value) {
+        Node node = head;
+        while(node != null) {
+            if(node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
 
     public Node getNodeIndex(int index) {
         Node node = head;         // Start from the head of the list
@@ -63,7 +73,7 @@ public class LL {
         
         // Delete node at the given index
         Node prev = getNodeIndex(index - 1); // Get the previous node
-        int value = prev.value;
+        int value = prev.next.value;
         Node curr = prev.next; // The current node to be deleted
         prev.next = curr.next; // Bypass the current node
     

@@ -24,8 +24,9 @@ public class main {
         } catch (IndexOutOfBoundsException e) {
             System.out.println(e.getMessage()); // Prints: Invalid index: 6
         }
-
+        System.out.println(list.delete(1));
+        System.out.println(list.findNodeValue(1));
         // Display the final list
-        list.display(); // Expected: 2 -> 5 -> 1 -> null
+        list.display(); // Expected: 2 -> 1 -> null
     }
 }

@@ -7,6 +7,8 @@ public class main {
         list.insertFirst(20);
         list.insertFirst(30);
         list.insertLast(40);
+        list.insert(490, 1);
+        list.insertAfterValue(49,32);
         list.display();
 
     }

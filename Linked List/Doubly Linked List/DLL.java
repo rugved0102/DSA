@@ -1,7 +1,10 @@
 
 public class DLL {
     private Node head;
-    
+    private int size;
+    public DLL() {
+        this.size = 0;
+    }
     public void insertFirst(int val) {
         // 1. Create a new node with the given value
         Node node = new Node(val);
@@ -20,6 +23,38 @@ public class DLL {
     
         // 5. Update the head of the list to the new node
         head = node;
+        size++;
+    }
+
+    public void insert(int val, int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Invalid index");
+        }
+    
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+        if (index == size) {
+            insertLast(val);
+            return;
+        }
+    
+        Node temp = head;
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.next;
+        }
+    
+        Node node = new Node(val);
+        node.next = temp.next;
+        node.prev = temp;
+    
+        if (temp.next != null) {
+            temp.next.prev = node;
+        }
+    
+        temp.next = node;
+        size++;
     }
     
     public void insertLast(int val) {
@@ -38,7 +73,38 @@ public class DLL {
         last.next = node;
         
         node.prev = last;
+        size++;
+    }
 
+    public Node findNodeValue(int value) {
+        Node node = head;
+        while(node != null) {
+            if(node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public void insertAfterValue(int after, int value) {
+        Node p = findNodeValue(after);
+        if(p == null) {
+            System.out.println("Node with value = "+value+" Not found in the DLL");
+            return;
+        }
+        if(p.next == null) {
+            insertLast(value);
+            return;
+        }
+        Node node = new Node(value);
+        node.next = p.next;
+        p.next = node;
+        if(node.next != null) {
+            node.next.prev = node;
+        }
+        node.prev = p;
+        size++;
     }
 
     public void display() {
@@ -65,6 +131,10 @@ public class DLL {
         private Node prev;
         private Node(int value) {
             this.value = value;
+        }
+        private Node(int value, Node next) {
+            this.value = value;
+            this.next = next;
         }
         private Node(int value, Node next, Node prev) {
             this.value = value;

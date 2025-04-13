@@ -23,11 +23,11 @@ public class CustomStack {
         return true;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return ptr == data.length-1; // ptr is at last index
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return ptr == -1; 
     }
 

@@ -2,8 +2,8 @@
 
 public class QueueMain {
 public static void main(String[] args) {
-    CustomQueue queue = new CustomQueue();
-
+    // CustomQueue queue = new CustomQueue();
+    CircularQueue queue = new CircularQueue();
     queue.insert(1);
     queue.insert(2);
     queue.insert(3);

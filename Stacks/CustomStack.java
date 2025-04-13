@@ -1,4 +1,4 @@
-package Stacks;
+// package Stacks;
 
 public class CustomStack {
     int[] data;
@@ -31,13 +31,20 @@ public class CustomStack {
         return ptr == -1; 
     }
 
-    public int pop() {
+    public int pop() throws StackException {
         if(isEmpty()) {
-            throw new Exception("Cannot pop from an empty stack!!")
+            throw new StackException("Cannot pop from an empty stack!!");
         }
         // int removed = data[ptr];
         // ptr--;
         // return removed;
         return data[ptr--];
+    }
+
+    public int peek() throws StackException{
+        if(isEmpty()) {
+            throw new StackException("Cannot peek from an empty stack!!");
+        }
+        return data[ptr];
     }
 }

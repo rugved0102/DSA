@@ -142,6 +142,10 @@ public class LL {
                 this.value = value;
                 this.next = next;
             }
+            // private Node(int value, Node next) {
+            //     this.value = value;
+            //     this.next = next;
+            // }
 
     }
 }

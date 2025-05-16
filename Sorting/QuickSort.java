@@ -40,3 +40,9 @@ public class QuickSort {
 // Space Complexity
 // Best and Avg Case : O(log n)  // for recursive calls
 // Worst Case : O(n)             // smallest or largest elem is pivot
+
+// | Case         | Recurrence Relation             | Time Complexity |
+// | ------------ | ------------------------------- | --------------- |
+// | Best Case    | T(n) = 2T(n/2) + O(n)           | O(n log n)      |
+// | Average Case | T(n) = T(cn) + T((1−c)n) + O(n) | O(n log n)      |
+// | Worst Case   | T(n) = T(n−1) + O(n)            | O(n²)           |

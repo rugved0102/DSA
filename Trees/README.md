@@ -75,3 +75,7 @@ It behaves like a **linked list**.
 | Balanced          | Height difference ≤ 1 between subtrees            |
 | Degenerate/Skewed | Only one child per node (left or right)           |
 
+---
+![Screenshot (471)](https://github.com/user-attachments/assets/d51e2b84-7adc-431b-aa5b-19014e48d0d8)
+
+

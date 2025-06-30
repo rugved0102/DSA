@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/description/
+// gives TLE
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,13 +12,14 @@ public class leetcode_2099 {
         // Output: [3,3]
         // Explanation:
         // The subsequence has the largest sum of 3 + 3 = 6.
+        // int maxSum = 0;
         int[] arr = {2,1,3,3};
         int k = 2;
         int[] res = maxSubsequence(arr, k);
         System.out.println(Arrays.toString(res)); // [3, 3]
     }
     public static int[] maxSubsequence(int[] nums, int k) {
-        backtrack(0, nums, k, new ArrayList<>());
+        backtrack(0, nums, k, new ArrayList<>(), 0);
 
         int[] res = new int[result.size()];
         for(int i = 0; i < result.size(); i++) {
@@ -24,11 +27,11 @@ public class leetcode_2099 {
         }
         return res;
     }
-    public static void backtrack(int index, int[] nums, int k, List<Integer> curr) {
+    public static void backtrack(int index, int[] nums, int k, List<Integer> curr, int curMax) {
         if(curr.size() == k) {
-            int sum = curr.stream().mapToInt(Integer::intValue).sum();
-            if(sum > maxSum) {
-                maxSum = sum;
+            // int sum = curr.stream().mapToInt(Integer::intValue).sum();
+            if(curMax > maxSum) {
+                maxSum = curMax;
                 result = new ArrayList<>(curr);
             }
             return;
@@ -37,9 +40,9 @@ public class leetcode_2099 {
         if(index == nums.length) return;
 
         curr.add(nums[index]);
-        backtrack(index + 1, nums, k, curr);
+        backtrack(index + 1, nums, k, curr, curMax + nums[index]);
         curr.remove(curr.size()-1);
-        backtrack(index+1, nums, k, curr);
+        backtrack(index+1, nums, k, curr, curMax);
 
     }
 }

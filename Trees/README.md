@@ -8,7 +8,7 @@ A binary tree in which every node has **either 0 or 2 children**.
    / \
   2   3
  / \  / \
-4  5 6  7
+4  5 6   7
 ```
 
 ---
@@ -77,5 +77,7 @@ It behaves like a **linked list**.
 
 ---
 ![Screenshot (471)](https://github.com/user-attachments/assets/d51e2b84-7adc-431b-aa5b-19014e48d0d8)
+
+---
 
 

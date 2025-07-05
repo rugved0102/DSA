@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-class BinaryTree {
+class _02_BinaryTree {
 
-    public BinaryTree() {
+    public _02_BinaryTree() {
 
     }
 
@@ -60,7 +60,7 @@ class BinaryTree {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BinaryTree tree = new BinaryTree();
+        _02_BinaryTree tree = new _02_BinaryTree();
         tree.populate(scanner);
         tree.display();
     }

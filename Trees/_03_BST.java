@@ -73,6 +73,50 @@ public class _03_BST {
     private void printSpaces(int count) {
         for (int i = 0; i < count; i++) System.out.print(" ");
     }
+    // ✅ Inorder Traversal (LNR)
+    public void inorder() {
+        System.out.print("Inorder: ");
+        inorderRec(root);
+        System.out.println();
+    }
+
+    private void inorderRec(Node node) {
+        if (node != null) {
+            inorderRec(node.left);
+            System.out.print(node.value + " ");
+            inorderRec(node.right);
+        }
+    }
+
+    // ✅ Preorder Traversal (NLR)
+    public void preorder() {
+        System.out.print("Preorder: ");
+        preorderRec(root);
+        System.out.println();
+    }
+
+    private void preorderRec(Node node) {
+        if (node != null) {
+            System.out.print(node.value + " ");
+            preorderRec(node.left);
+            preorderRec(node.right);
+        }
+    }
+
+    // ✅ Postorder Traversal (LRN)
+    public void postorder() {
+        System.out.print("Postorder: ");
+        postorderRec(root);
+        System.out.println();
+    }
+
+    private void postorderRec(Node node) {
+        if (node != null) {
+            postorderRec(node.left);
+            postorderRec(node.right);
+            System.out.print(node.value + " ");
+        }
+    }
 
     public static void main(String[] args) {
         _03_BST tree = new _03_BST();
@@ -82,5 +126,8 @@ public class _03_BST {
         }
 
         tree.printTreeStructure();
+        tree.inorder();
+        tree.preorder();
+        tree.postorder();
     }
 }

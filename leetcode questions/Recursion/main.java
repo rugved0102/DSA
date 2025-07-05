@@ -1,26 +1,20 @@
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 class main {
-    public static int numSubseq(int[] nums, int target) {
+    public int findLHS(int[] nums) {
         
-    }
-    public static void backtrack(int index, int[] nums, int target, int curSum, int cnt, List<Integer> list) {
-        int curSum = helper();
-        if(curSum <= target) {
-            cnt++;
-            return;
+        int maxLen = 0;
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int num : nums) {
+            map.put(num, map.getOrDefault(num,0)+1);
         }
-        if(index >= nums.length) return;
 
-        list.add(nums[index]);
-        backtrack(index+1, nums, target, curSum, cnt, list);
-        list.remove(list.size()-1);
-        backtrack(index+1, nums, target, curSum, cnt, list);
-    }
-    public static int helper() {
-
-    }
-    public static void main(String[] args) {
-        
+        for(int key : map.keySet()) {
+            if(map.containsKey(key+1)) {
+                maxLen = Math.max(maxLen, map.get(key)+map.get(key+1));
+            }
+        }
+        return maxLen;
     }
 }

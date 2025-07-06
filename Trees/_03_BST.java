@@ -129,5 +129,6 @@ public class _03_BST {
         tree.inorder();
         tree.preorder();
         tree.postorder();
+        
     }
 }

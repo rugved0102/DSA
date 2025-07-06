@@ -80,4 +80,105 @@ It behaves like a **linked list**.
 
 ---
 
+# 🌳 Tree Traversals: Inorder, Preorder, Postorder
+
+## ✅ What is Tree Traversal?
+> **Tree traversal** means visiting every node in a tree **exactly once** in a specific order.
+
+---
+
+## 1. 🔁 Inorder Traversal (LNR)
+
+- **Order:** Left → Node → Right
+- **Use:** Gets nodes in **sorted order** (for BST).
+
+**Example:**
+```text
+   10
+  /  \
+ 5    15
+
+```
+**Inorder:** `5 10 15`
+
+**Java Code:**
+
+```java
+void inorder(Node node) {
+if (node != null) {
+inorder(node.left);
+System.out.print(node.value + " ");
+inorder(node.right);
+}
+}
+```
+
+---
+
+## 2. 🧭 Preorder Traversal (NLR)
+
+- **Order:** Node → Left → Right
+- **Use:** Tree serialization, copying tree structure.
+
+**Example:**
+```text
+   10
+  /  \
+ 5    15
+
+```
+
+**Preorder:** `10 5 15`
+
+**Java Code:**
+```java
+void preorder(Node node) {
+if (node != null) {
+System.out.print(node.value + " ");
+preorder(node.left);
+preorder(node.right);
+}
+}
+```
+
+---
+
+## 3. 🌀 Postorder Traversal (LRN)
+
+- **Order:** Left → Right → Node
+- **Use:** Deleting/freeing tree, evaluating expression trees.
+
+**Example:**
+```text
+   10
+  /  \
+ 5    15
+
+```
+**Postorder:** `5 15 10`
+
+**Java Code:**
+```java
+void postorder(Node node) {
+if (node != null) {
+postorder(node.left);
+postorder(node.right);
+System.out.print(node.value + " ");
+}
+}
+```
+
+
+---
+
+## 🧠 Quick Comparison Table
+
+| Traversal  | Order      | Common Use                  |
+|------------|------------|-----------------------------|
+| Inorder    | L → N → R  | Get sorted data (BST)       |
+| Preorder   | N → L → R  | Save/copy tree structure    |
+| Postorder  | L → R → N  | Deleting, freeing memory    |
+
+---
+
 
